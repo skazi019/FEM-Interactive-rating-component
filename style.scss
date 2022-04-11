@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+// Font Config
+$primary-font-family: 'Overpass',
+sans-serif;
+$primary-font-size: 15px;
+
+// Color Config
+$primary-orange: hsl(25, 97%, 53%);
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-light-grey: hsl(217, 12%, 63%);
+$neutral-medium-grey: hsla(216, 12%, 54%, 0.102);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font-family;
+    font-size: $primary-font-size;
+    padding: 0;
+    margin: 0;
+    background-color: $very-dark-blue;
+
+    .main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            margin: 0 1.5rem;
+            background-color: $dark-blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            border-radius: 1rem;
+
+            .rating-state {
+                display: block;
+                padding: 1.5rem;
+                transition: all 0.5s ease-in-out;
+
+                .rating-logo {
+                    background-color: $neutral-medium-grey;
+                    padding: 1rem;
+                    border-radius: 50%;
+                }
+
+                .hero-question {
+                    color: $neutral-white;
+                }
+
+                .hero-para {
+                    color: $neutral-light-grey;
+                }
+
+                .ratings {
+                    list-style-type: none;
+                    margin: 1rem 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    li{
+
+                        .rating-number {
+                            display: none;
+                        }
+
+                        .rating-label {
+                            --rating-circle-size: 1.5rem;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: var(--rating-circle-size);
+                            height: var(--rating-circle-size);
+                            background-color: $neutral-medium-grey;
+                            padding: var(--rating-circle-size);
+                            border-radius: 50%;
+                            cursor: pointer;
+                            transition: background 0.3s;
+                        }
+
+                        .rating-number:hover+.rating-label {
+                            background-color: $primary-orange;
+                        }
+
+                        .rating-number:checked+.rating-label {
+                            background-color: $neutral-light-grey;
+                        }
+                    }
+
+                }
+
+                .submit-btn {
+                    margin: 1rem 0;
+                    background-color: $primary-orange;
+                    border: none;
+                    width: 100%;
+                    padding: 1rem 0;
+                    border-radius: 3rem;
+                    color: $neutral-white;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    transition: background 0.3s;
+                }
+
+                .submit-btn:hover {
+                    color: $primary-orange;
+                    background-color: $neutral-white;
+                    cursor: pointer;
+                }
+            }
+
+            .thank-you-state {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                // transition: all 0.5s ease-in-out;
+
+                img {
+                    margin: 1rem 0;
+                }
+
+                .rating-given {
+                    margin: 1.5rem 0;
+                    color: $primary-orange;
+                    background-color: $neutral-medium-grey;
+                    padding: .5rem;
+                    border-radius: 1rem;
+                }
+
+                h1 {
+                    color: $neutral-white;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 1rem 0;
+                    text-align: center;
+                    color: $neutral-light-grey;
+                }
+            }
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+          }
+      
+          .attribution a {
+            color: hsl(228, 45%, 44%);
+          }
+
+    }
+
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        .main {
+            .card {
+                max-width: 375px;
+            }
+        }
+    }
+}

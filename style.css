@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: #121417;
+}
+
+body .main {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .card {
+  margin: 0 1.5rem;
+  background-color: #252d37;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+}
+
+body .main .card .rating-state {
+  display: block;
+  padding: 1.5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .main .card .rating-state .rating-logo {
+  background-color: rgba(124, 135, 152, 0.102);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+body .main .card .rating-state .hero-question {
+  color: white;
+}
+
+body .main .card .rating-state .hero-para {
+  color: #959eac;
+}
+
+body .main .card .rating-state .ratings {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main .card .rating-state .ratings li .rating-number {
+  display: none;
+}
+
+body .main .card .rating-state .ratings li .rating-label {
+  --rating-circle-size: 1.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: var(--rating-circle-size);
+  height: var(--rating-circle-size);
+  background-color: rgba(124, 135, 152, 0.102);
+  padding: var(--rating-circle-size);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+body .main .card .rating-state .ratings li .rating-number:hover + .rating-label {
+  background-color: #fb7413;
+}
+
+body .main .card .rating-state .ratings li .rating-number:checked + .rating-label {
+  background-color: #959eac;
+}
+
+body .main .card .rating-state .submit-btn {
+  margin: 1rem 0;
+  background-color: #fb7413;
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 3rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 3px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+body .main .card .rating-state .submit-btn:hover {
+  color: #fb7413;
+  background-color: white;
+  cursor: pointer;
+}
+
+body .main .card .thank-you-state {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+body .main .card .thank-you-state img {
+  margin: 1rem 0;
+}
+
+body .main .card .thank-you-state .rating-given {
+  margin: 1.5rem 0;
+  color: #fb7413;
+  background-color: rgba(124, 135, 152, 0.102);
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+body .main .card .thank-you-state h1 {
+  color: white;
+  margin: 0;
+}
+
+body .main .card .thank-you-state p {
+  margin: 1rem 0;
+  text-align: center;
+  color: #959eac;
+}
+
+body .main .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body .main .attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 375px) {
+  body .main .card {
+    max-width: 375px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
